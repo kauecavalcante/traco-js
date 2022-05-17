@@ -1,0 +1,39 @@
+As estruturas de decisão são usadas quando você quer dar um fluxo diferente o código em função de alguma condição. Exemplo:
+Se a nota do aluno for menor que 7, exiba a palavra 'REPROVADO', mas se a nota do aluno for maior ou igual a 7, exiba a palavra 'APROVADO'.
+
+if (nota <7) {
+    console.log('REPROVADO')
+} else {
+    console.log('APROVADO')
+}
+
+ELSE IF
+A estutura else if permite realizar o teste de uma segunda condição.
+As condições podem ser expressas com ajuda dos operadores de comparação e operadores lógicos
+
+if = se 
+else = se não
+
+EXEMPLO:
+
+> var x = 2
+> var y = 2
+
+> if (x==2 && y==2) { 'ok' } else { 'ERRO!' }
+'ok'
+
+> x = 3
+
+> if (x==2 && y==2) { 'ok' } else { 'ERRO!' }
+'ERRO!'
+
+> if (x==2 ||  y==2) { 'ok' } else { 'ERRO!' }
+'ok'
+
+> y = 2.1
+
+> if (x==2 ||  y==2) { 'ok' } else { 'ERRO!' }
+'ERRO!'
+
+AND && (e) -> vv=v, vf=f, fv=f, ff=f
+OR || (ou) -> vv=v, vf=v, fv=v, ff=f

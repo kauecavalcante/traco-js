@@ -1,0 +1,7 @@
+Variaveis são áreas de memorias. podem conter dados ou valores.
+Eles são unicos, não é possivel usar o mesmo identificador para variaveis diferentes.
+
+O sinal de = é usado para atribuir valores as variaveis.
+Variaveis podem conter muitos tipos de dados, por ora vamos focar em números e textos:
+Var x = 5; ---> número
+var sexo = 'm' -----> texto (string)

@@ -1,0 +1,8 @@
+Funções são blocos de codigo que executam uma tarefa em particular:
+
+function soma(n1, n2) {
+    return n1+n2;
+}
+
+Podem receber parâmetros e/ou retornar valores.
+Variaveis criadas dentro de uma função não são acessiveis fora dela.

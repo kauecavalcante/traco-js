@@ -1,0 +1,39 @@
+No mundo real, chamamos determinadas coisas de objetos, por exemplo, um carro.
+Carros tem  caracteristicas comum, como peso, potencia, cor ou marca.
+Cada carro em especifico tem valores especificos para cada caracteristica.
+
+Além das caracteristicas, carros também executam ações em comum: 
+Dar partida 
+Trocar de marcha 
+frear ou desligar o motor 
+
+No js, objetos são um tipo especial de variaveis.
+Um objeto pode conter propriedade e metodos.
+As propriedades são caracteristicas do objeto e métodos são suas ações.
+
+var carro = {
+    modelo: 'Kicks',
+    cor: 'brano',
+    potencia: '110cv'
+}
+
+O exemplo acima cria um objeto de nome carro com as propriedades modelo, cor e potência.
+O valor de uma propriedade pode ser atribuida ou modificada da seguinte forma:
+
+carro.modelo = 'Goil'
+carro.cor = 'Cinza'
+carro.potencia = '90cv'
+
+Os métodos são ações que podem ser executadas com um objeto e suas propriedades.
+Os metodos de um objeto são atribuidos como funções:
+
+var pessoa = {
+    nome: 'kaue';
+    sobrenome: 'cavalcante',
+    nomecompleto: function() {
+        return this.nome + ' ' + this.sobrenome
+    }
+}
+
+Os métodos são invocados da seguinte forma:
+pessoa.nomecompleto()
