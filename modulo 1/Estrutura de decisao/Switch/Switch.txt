@@ -1,0 +1,14 @@
+Switch
+
+A instrução Switch permite a execução de blocos diferentes de código em função de um ou mais valores numa expressão.
+
+switch (varisvel) { 
+    case valor1:
+    bloco de comando;
+    break;
+    case valor2:
+    bloco de comando;
+    break;
+    default:
+    bloco de comando;
+}

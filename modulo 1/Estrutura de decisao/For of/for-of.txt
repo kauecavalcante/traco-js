@@ -1,0 +1,38 @@
+For of 
+Criar um laço de repetição com conteudos de uma variavel ou array:
+
+for (x of nome) {
+    console.log(nome[x])
+}
+
+EXEMPLO:
+
+for of 
+
+> var frutas = [ 'banana', 'mamão', 'laranja', 'abacate' ]
+undefined
+> for (x of frutas) { console.log(x); }
+banana
+mamão
+laranja
+abacate
+undefined
+> var nome = 'Kaue Cavalcante!'
+undefined
+> for (x of nome) { console.log(x); }
+K
+a
+u
+e
+ 
+C
+a
+v
+a
+l
+c
+a
+n
+t
+e
+!

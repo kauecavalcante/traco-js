@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    
+       <p id="tabuada">
+          
+
+       </p>
+
+       
+</body>
+
+      <script>
+          var n = prompt('Digite um numero:')
+          var i;
+
+          document.getElementById('tabuada').innerHTML = 'Tabuada do ' + n + '<br>' + '<br>';
+
+          for (i=1; i<=10; i++) {
+              document.getElementById('tabuada').innerHTML += n + ' X ' + i + ' = ' + (n*i) + '<br>';
+          }
+      </script>
+</html>
+
+for in
+
+> var pessoa = { 
+    ... nome: 'Kaue',
+    ... idade: 17,
+    ... altura: 1.82 
+    ... }
+
+    > pessoa
+    { nome: 'Kaue', idade: 17, altura: 1.82 }
+
+    > for (x in pessoa) { console.log(x); }
+nome
+idade
+altura
+
+> for (x in pessoa) { console.log(pessoa[x]); }
+Kaue
+17
+1.82
+
+> for (x in pessoa) { console.log(x + ' -> ' + pessoa[x]); }
+nome -> Kaue
+idade -> 17
+altura -> 1.82
+
+---------------------------------
+
+for of 
+
+> var frutas = [ 'banana', 'mamão', 'laranja', 'abacate' ]
+undefined
+> for (x of frutas) { console.log(x); }
+banana
+mamão
+laranja
+abacate
+undefined
+> var nome = 'Kaue Cavalcante!'
+undefined
+> for (x of nome) { console.log(x); }
+K
+a
+u
+e
+ 
+C
+a
+v
+a
+l
+c
+a
+n
+t
+e
+!

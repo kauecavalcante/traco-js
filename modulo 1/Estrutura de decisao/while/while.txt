@@ -1,0 +1,11 @@
+While
+A instrução while executa um bloco de codigo enquanto uma condição for verdadeira.
+
+var x = 1;
+while (x <= 10) {
+    console.log(x);
+    x++;
+}
+
+Do while
+A instrução Do/while também executa um bloco de código enquanto o Do/while faz a checagem da condição após executar uma vez o codigo...

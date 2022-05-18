@@ -1,0 +1,17 @@
+For
+
+A instrução for permite a execução de blocos códigos por um número definido de vezes.
+
+var n = 5
+console.log(n*1)
+console.log(n*2)
+console.log(n*3)
+console.log(n*4)
+
+Acima esta o modo errado!
+
+var n = 5;
+var i;
+for (i = 1; i <= 10; i++) {
+    console.log(n*i);
+}

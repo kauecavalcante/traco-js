@@ -1,0 +1,34 @@
+For in 
+Criar um laço de repetição com propriedades de objetos:
+
+for (x in pessoa) {
+    console.log(pessoa[x])
+}
+
+EXEMPLOS:
+
+for in
+
+> var pessoa = { 
+    ... nome: 'Kaue',
+    ... idade: 17,
+    ... altura: 1.82 
+    ... }
+
+    > pessoa
+    { nome: 'Kaue', idade: 17, altura: 1.82 }
+
+    > for (x in pessoa) { console.log(x); }
+nome
+idade
+altura
+
+> for (x in pessoa) { console.log(pessoa[x]); }
+Kaue
+17
+1.82
+
+> for (x in pessoa) { console.log(x + ' -> ' + pessoa[x]); }
+nome -> Kaue
+idade -> 17
+altura -> 1.82
