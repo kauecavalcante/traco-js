@@ -9,3 +9,12 @@ while (x <= 10) {
 
 Do while
 A instrução Do/while também executa um bloco de código enquanto o Do/while faz a checagem da condição após executar uma vez o codigo...
+
+var x = 1;
+  do {
+      console.log(x);
+      x++
+  } while (x <= 10);
+
+  A diferença é que DO/WHILE o bloco de comandos sera executado ao mneos uma vez antes de testar a condição.
+  E no WHILE a condição é testada antes que qualquer comando do bloco seja executada.
