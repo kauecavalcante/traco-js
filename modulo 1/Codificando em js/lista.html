@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body>
+    <p id="cabecalho"> Meu programa em javascript - LISTA </p>
+
+    <p id="lista" style="background-color: #cccccc; display: inline-block; padding: 10px;">lista</p>
+
+    <p id="acoes">
+        <input type="button" value="Adicionar Item" onclick="inserirItem(minhaLista);">
+        <input type="button" value="Remover Item" onclick="removerItem(minhaLista);">
+    </p>
+
+    
+</body>
+<script>
+     //Variaveis 
+     var minhaLista = ['abacaxi', 'banana', 'limão']
+     //Funções
+     function exibirLista(arr) {
+         var textoRetorno = ''; //Criei uma variavel em branco
+         for(i = 0; i<=arr.length-1; i++) {
+           textoRetorno += i + ' - ' + arr[i] + '<br>'  
+         }
+
+         document.getElementById('lista').innerHTML = textoRetorno;
+     }
+
+     function inserirItem(arr) {
+         var novoItem = prompt('Digite um novo item:');
+
+         if (novoItem!=null && novoItem!='') { // se o novo item for diferente de null eu adiciono o item e diferente de abre e fecha aspas esta verificando se o item esta vazio.
+            arr.push(novoItem);
+         } else {
+           alert('Nenhum item foi digitado!');
+         }
+
+         exibirLista(arr);
+     }
+
+     function removerItem(arr) {
+         var item = prompt('Digite o número do item a ser removido:');
+
+         if (item!=null && item!='') {
+            arr.splice(item,1); // '1' é a quantidade de item que quero remover.
+         } else {
+             alert('Nenhum item foi digitado!')
+         }
+         exibirLista(arr);
+
+     }
+
+     exibirLista(minhaLista);
+
+</script>
+</html>
