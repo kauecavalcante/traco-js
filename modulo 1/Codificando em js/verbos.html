@@ -72,6 +72,17 @@ Eles programam
 
 </body>
 <script>
-    
+    function conjugarVerbo() {
+        var verbo = document.getElementById('verbo').value; //peguei o verbo que foi digitado no input
+        var radical = verbo.substr(0, verbo.length-2);
+        var pessoa = ['Eu', 'Tu', 'Ele', 'Nós', 'Vós', 'Eles'];
+        var terminacao = ['o', 'as', 'a', 'amos', 'ais', 'am'];
+        var linhas = '';
+        for(i=0; i<=5; i++) {
+           linhas += pessoa[i] + ' ' + radical + terminacao[i] + '<br>';
+        }
+
+        document.getElementById('folha').innerHTML = linhas
+    }
 </script>
 </html>
