@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poupança</title>
+</head>
+<body>
+    <p id="titulo">Minha Poupança</p>
+
+    <p id="saldo" style="background-color: #aaffff;">Saldo:</p>
+
+    <p id="acoes">
+        <input type="text" id="valor"> <br>
+        <input type="button" value="Depósito" onclick="poupanca.depositar()">
+        <input type="button" value="Saque" onclick="poupanca.sacar()">
+        <input type="button" value="Extrato" onclick="poupanca.exibirExtrato()">
+    </p>
+
+    <p id="extrato" style="background-color: #aaffff;">Extrato</p>
+</body>
+
+<script>
+  //variaveis
+   var saidaSaldo = document.getElementById('saldo');
+   var saidaExtrato = document.getElementById('extrato');
+   var valorHTML = document.getElementById('valor');
+    //objeto
+    var poupanca = {
+        saldo: 0,
+        movimentacao: [],
+
+        depositar: function() {
+          this.saldo += Number(valorHTML.value);
+          saidaSaldo.innerHTML = this.saldo;
+          this.movimentacao.push('Depósito de ' + valorHTML.value);
+          valorHTML.value = '';
+        },
+        sacar: function() {
+            var valor = Number(valorHTML.value);
+            if (valor>this.saldo) {
+                alert('Saldo Insuficiente!')
+            } else {
+                this.saldo -= valor;
+                this.movimentacao.push('Saque de ' + valor);
+            }
+            saidaSaldo.innerHTML = this.saldo;
+            valorHTML.value = '';
+
+        },
+        exibirExtrato: function() {
+            saidaExtrato.innerHTML = 'Extrato: <br>'
+
+           for(i=0; i<=this.movimentacao.length-1; i++) {
+               saidaExtrato.innerHTML += this.movimentacao[i] + '<br>';
+           }
+        }
+    }
+</script>
+</html>
