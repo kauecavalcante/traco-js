@@ -1,0 +1,77 @@
+<!-- > var verbo = 'consertar';
+
+> verbo.substr(0, 3)
+'con'
+> verbo.substr(4, 3)
+'ert'
+> verbo.substr(2, 5)
+'nsert'
+> verbo.substr(0, 7)
+'consert'
+> verbo.substr(0, verbo.length-2)
+'consert'
+
+> verbo = 'acordar'
+'acordar'
+> verbo.substr(0, verbo.length-2)
+'acord'
+
+> var pessoa = ['Eu', 'Tu', 'Ele', 'Nós', 'Vós', 'Eles']
+
+> pessoa
+[ 'Eu', 'Tu', 'Ele', 'Nós', 'Vós', 'Eles' ]
+> var terminacao = ['o', 'as', 'a', 'amos', 'ais', 'am']
+
+> verbo
+'acordar'
+> verbo.substr(0, verbo.length-2)
+'acord'
+> pessoa
+[ 'Eu', 'Tu', 'Ele', 'Nós', 'Vós', 'Eles' ]
+> terminacao
+[ 'o', 'as', 'a', 'amos', 'ais', 'am' ]
+> pessoa[0] + ' ' + verbo.substr(0, verbo.length-2) + terminacao[0]
+'Eu acordo'
+
+> for (i=0; i<=5; i++) { console.log(pessoa[i] + ' ' + verbo.substr(0, verbo.length-2) + terminacao[i]); }
+Eu acordo
+Tu acordas
+Ele acorda
+Nós acordamos
+Vós acordais
+Eles acordam
+undefined
+> verbo = 'programar'
+'programar'
+> for (i=0; i<=5; i++) { console.log(pessoa[i] + ' ' + verbo.substr(0, verbo.length-2) + terminacao[i]); }
+Eu programo 
+Tu programas
+Ele programa   
+Nós programamos
+Vós programais 
+Eles programam
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conjugador de verbos</title>
+</head>
+<body>
+    
+   <p id="cabecalho">Conjugador de verbos</p>
+
+   <p id="acoes">Digite um verbo: <input type="text" id="verbo">
+      <input type="button" value="Ok" onclick="conjugarVerbo()">
+   </p>
+
+   <p id="folha"></p>
+
+</body>
+<script>
+    
+</script>
+</html>
