@@ -1,0 +1,13 @@
+Banco de Dados
+
+O que é Banco de Dados?
+Todo lugar utilizado para armazenamento de informações, seja do seu sistema como dos usuarios que o acessam;
+
+Tipos de Bancos de Dados
+Relacional 
+Não Relacional
+
+Teorema CAP 
+Consistency: É garantir a consistência dos dados e mais atualizados possiveis.
+Availability: Tenha total disponibilidade. Quando for chamado, ele responder seja quando for.
+Partitioning: O sistema continua funcionando, mesmo que parte da rede pare de funcionar.
