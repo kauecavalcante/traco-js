@@ -1,0 +1,75 @@
+<!--
+> var cpf = 11122233396
+> cpf
+11122233396
+> cpf = String(cpf);
+'11122233396'
+> cpf[0]
+'1'
+> cpf[1]
+'1'
+> cpf[2]
+'1'
+> cpf[3]
+'2'
+> cpf[9]
+'9'
+> cpf[8]
+'3'
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar cpf</title>
+</head>
+<body>
+    <p id="titulo">
+        Validar cpf
+    </p>
+
+    <p id="acoes">
+        Digite o cpf sem pontos ou traço: <br>
+        <input type="text" id="cpf">
+        <input type="button" value="Validar" onclick="validarCPF();">
+    </p>
+    
+</body>
+    <script>
+        function validarCPF() {
+            //Receber o CPF informado na pagina html
+            let cpf = String(document.getElementById('cpf').value);
+
+            let cpfDV1 = cpf[9];
+            let cpfDV2 = cpf[10];
+            // Armazeno a somatoria de valores para o cálculo dos DV
+            let soma = 0;
+
+            //LAço que calcula a soma do primeiro digito DV
+            for (i=0; i<=8; i++) {
+                soma += cpf[i] * (10-i);
+            }
+            // calculo do primeiro DV
+            let calcDV1 = 11 - (soma % 11);
+            // zerando a soma para iniciar o proximo passo
+            soma = 0;
+
+            //Laço que calcula a soma do segundo DV
+            for(i=0; i<=9; i++) {
+                soma += cpf[i] * (11-i);
+            }
+            // calculo do primeiro DV
+            let calcDV2 = 11 - (soma % 11);
+
+            //Verificação se os DV calculados são iguais aos DV digitados
+            if (cpfDV1 == calcDV1 && cpfDV2 == calcDV2) {
+                alert('CPF é válido.');
+            } else {
+                alert('CPF é inválido.');
+            }
+        }
+    </script>
+</html>
