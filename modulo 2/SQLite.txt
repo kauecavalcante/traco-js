@@ -1,0 +1,6 @@
+Sobre o SQLite!
+Biblioteca de Banco de Dados escrito em C.
+"Embutido" dentro do seu sistema.
+Utiliza a linguagem SQL para a manipulação de dados.
+Fácil de utilizar e configurar
+Open source (dominio público)
