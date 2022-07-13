@@ -1,0 +1,31 @@
+Crinado tabela
+nome da tabela: users
+
+O que é PK? 
+É uma chave primaria que nunca vai se repetir.
+
+Comandos SQL
+Criando um usuario:
+INSERT INTO "users" (name, last_name, age)
+VALUES ("joão", "Fracisco", 41)
+
+Para Consultar dados:
+SELECT * FROM "users"
+* = puxa todos os dados { se quiser um nome solo, basta digitar qual você quer EX: name, age}
+
+Consultar dados:
+Para mostrar pessoas com 30 anos ou mais.
+SELECT name, age FROM "users" WHERE age > 30
+
+Para fazer uma ordem:
+ORDER BY age ASC (ASC ou DESC)
+
+como editar dados:
+UPDATE "users" SET last_name = "Almeida" WHERE id = 3
+
+Como apagar dados:
+DELETE FROM "users" WHERE id = 4 
+
+Como mostrar o nome pelo ID: 
+SELECT * FROM "users" INNER JOIN "user_logins" on user_logins.user_id = users.id
+INNER JOIN ou LEFT JOIN {mostra ate quem não logou}
