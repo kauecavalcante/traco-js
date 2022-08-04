@@ -1,0 +1,116 @@
+Como funciona uma página Web.
+Funciona em dois pontos:
+    Client-side e server-side
+
+Para iniciar qualquer projeto você precisa utilizar o comando: 
+    npm init
+Vai gerar um arquivo chamado:
+    package.json
+
+Instalando duas bibliotecas que vamos usar para o desenvolvimento da API.
+
+* Instalando a primeira:
+    npm install nodemon
+ao instalar vai surgir uma pasta chamada node_modules que seria as bibliotecas que você
+instalou dentro da sua aplicação e um  arquivo para saber as versões que estão instaladas package-lock.json
+
+* Instalando a segunda:
+    npm install express
+
+Ultima coisa que precisamos alterar é no arquivo package.json. Temos que mudar o 'scripts'
+    "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+Crie a pasta SRC e o arquivo INDEX.JS
+
+Colocando um primeiro comando para testar.
+no Arquivo index.js fazer:
+    console.log("Olá Mundo!");
+Feito isso abra o terminal e escreva 'npm run dev'.
+
+---------------------------------------------------
+Criando API
+
+Dentro de package.json coloque em cima de 'scripts' o seguinte:
+    "type": "module",
+Dessa forma consegue da o import no index.js:
+    import express from 'express'
+
+Defino uma const:
+    const app = express();
+
+E para subir a API basta você usar o comando:
+    app.listen(8000, () => {
+    console.log("Servidor funcionando na porta 8000...")
+})
+
+depois abra o terminal e de um:
+    npm run dev
+vai estar funcionando.
+
+*Se você for no google e colocar:
+    localhost:8000
+nossa aplicação ja vai estar la mas sem dados.
+
+Vamos criar uma aplicação de exemplo:
+
+Para criar: 
+    Antes de chegar no comando anterior, coloque:
+        app.get('/api/ping', (request, response) => {
+    response.send ({
+        message: "pong"
+        })
+    });
+
+----------------------------------------------------
+*Criando API de get:
+
+    app.get('/api/customers', (request, response) => {
+    response.send(customers); 
+    });
+
+    const customers = [
+    {id: 1, name: "Marcos Vinicius"},
+    {id: 2, name: "Maris Eduarda"},
+    {id: 3, name: "José Francisco"}
+    ]
+
+*Criando API de post:
+
+    app.post('/api/customers', (request, response) => {
+    const { body } = request;
+    customers.push(body); 
+    response.send(customers);
+    });
+
+Fazendo isso ele vai receber informações e mandar pro get atualizado.
+
+Quando usamos o post, temos que tratar essa informação.
+
+Chame a função:
+    app.use(express.json());
+
+*Criando API de put:
+
+    app.put('/api/customers/:id', (request, response) => {
+    const { id } = request.params;
+    const { body } = request;
+
+    const index = customers.findIndex(customers => customers.id == id);
+
+    customers[index] = {id, ...body};
+
+    response.send(customers);
+
+    });
+
+*Criando a função delete: 
+
+    app.delete('/api/customers/:id', (request, response) => {
+    const { id } = request.params;
+    const newArray = customers.filter(customers => customers.id != id);
+    response.send(newArray);
+
+    });
+
+
