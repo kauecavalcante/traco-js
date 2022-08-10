@@ -1,0 +1,19 @@
+/* 
+Para integrar com o banco de dados precisa instalar: 
+    npm install sqlite3 sqlite
+
+E para utilizar precisa criar um arquivo: 
+    database.js
+onde vamos fazer as configurações do banco de dados.            
+no arquivo criado coloque:                                              
+    import sqlite3 from 'sqlite3';
+    import { open } from 'sqlite';
+
+Para chamar o banco de dados precisa fazer:
+export const openDatabase = async () => {
+    return await open({
+        filename: './src/database.db',
+        driver: sqlite3.Database
+    });
+}
+*/
